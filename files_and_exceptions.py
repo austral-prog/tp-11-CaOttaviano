@@ -21,9 +21,8 @@ def read_file_to_dict(filename):
         return ventas
 
 
-def process_dict(data):
-    ventas_dict = read_file_to_dict(data)
-    for producto, valor in ventas_dict.items():
-        total = sum(valor)
-        promedio = total/len(valor)
-        print(f"{producto}: ventas totales ${total:.2f}, promedio ${promedio:.2f}")
+def process_dict(ventas):
+        for producto, valor in ventas.items():
+            total = sum(valor)
+            promedio = total/len(valor)
+            print(f"{producto}: ventas totales ${total:.2f}, promedio ${promedio:.2f}")
